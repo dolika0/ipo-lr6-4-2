@@ -9,8 +9,8 @@
 
 import random # Подключение библиотеки 
 
-wight = random.randint(4, 8) # Задание высоты
-height = random.randint(4, 8) # Задание ширины 
+wight = random.randint(4, 8) # Задание ширины
+height = random.randint(4, 8) # Задание высоты
 
 print('Высота : ', height) # Вывод высоты на экран
 print('Ширина : ', wight) # Вывод ширины на экран
@@ -34,8 +34,8 @@ for row in Matrix: # Цикл для заполнения
 
 sum = 0 # Инициализация счётчика
 
-for row in Matrix: # Цикл для проверки столбцов
-    for i in row: # Цикл для проверки строк
+for row in Matrix: # Цикл для проверки  
+    for i in row: # Цикл для проверки  
       if i % 3 != 0: # Задание условия
         sum += i # Увеличение счётчика
 
