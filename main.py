@@ -25,9 +25,10 @@ for i in range(height): # Цикл for для строк
     for j in range(wight): # Цикл for для столбцов
        numb = random.choice(numbMatrix)
        row.append(numb) # В список добавляем рандомные числа
+       print(numb, end = " ")
        if numb % 3 != 0: # Задание условия
         sum += numb # Увеличение счётчика
-    print(row, end = ' ')
+    
     Matrix.append(row) # Добавляем row в пустую матрицу
     print()
 
