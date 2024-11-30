@@ -12,31 +12,23 @@ import random # Подключение библиотеки
 wight = random.randint(4, 8) # Задание ширины
 height = random.randint(4, 8) # Задание высоты
 
-print('Высота : ', height) # Вывод высоты на экран
 print('Ширина : ', wight) # Вывод ширины на экран
+print('Высота : ', height) # Вывод высоты на экран
 
 numbMatrix = [-15, -4, -2, -7, 0, 3, 5, 12, 9] # Числа для матрицы
-
 Matrix = [] # Создание пустой матрицы
+sum = 0 # Инициализация 
+print('Матрица: ') # Вывод на экран 
 
 for i in range(height): # Цикл for для строк
     row = [] # Будет представлять одну строку матрицы 
     for j in range(wight): # Цикл for для столбцов
-       row.append(random.choice(numbMatrix)) # В список добавляем рандомные числа
+       numb = random.choice(numbMatrix)
+       row.append(numb) # В список добавляем рандомные числа
+       if numb % 3 != 0: # Задание условия
+        sum += numb # Увеличение счётчика
+    print(row, end = ' ')
     Matrix.append(row) # Добавляем row в пустую матрицу
-
-print('Матрица: ') # Вывод на экран 
-
-for row in Matrix: # Цикл для заполнения
-    for i in row: # Цикл
-        print(i, end = ' ') # Добавляем элементы, разделяя пробелом 
-    print() # Переход на новую строку
-
-sum = 0 # Инициализация счётчика
-
-for row in Matrix: # Цикл для проверки  
-    for i in row: # Цикл для проверки  
-      if i % 3 != 0: # Задание условия
-        sum += i # Увеличение счётчика
+    print()
 
 print("Сумма всех чисел некратных трём : ", sum) # Вывод результата
